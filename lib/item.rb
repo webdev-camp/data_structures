@@ -4,15 +4,15 @@ class Item
     @value = val
   end
   def push(val)
-    if (@next)
-      @next.push(val)
-    else
+    if last_item?
       @next = Item.new(val)
+    else
+      @next.push(val)
     end
   end
   def pop
     return nil unless @next
-    if @next.last?
+    if @next.last_item?
       @next.value
       value = @next.value
       @next = nil
@@ -22,7 +22,7 @@ class Item
     end
   end
 
-  def last?
+  def last_item?
     if @next
       return false
     else
@@ -30,10 +30,10 @@ class Item
     end
   end
   def get_last
-    if (@next)
-      @next.get_last
-    else
+    if last_item?
       @value
+    else
+      @next.get_last
     end
   end
 end
