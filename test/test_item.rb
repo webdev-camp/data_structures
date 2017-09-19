@@ -7,12 +7,21 @@ class TestItem < MiniTest::Test
   end
 
   def test_creation
-    assert @item
-    assert_nil @item.next
+    assert @item.last?
   end
 
   def test_get_last
     @item.push(2)
     assert_equal 2, @item.get_last
+  end
+
+  def test_pop
+    assert_equal nil, @item.pop
+  end
+
+  def test_pop_one
+    @item.push(1)
+    one = @item.pop
+    assert_equal(1,one)
   end
 end
