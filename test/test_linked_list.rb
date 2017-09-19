@@ -31,4 +31,25 @@ class TestLinkedList < MiniTest::Test
     assert_equal 10, @list.first.next.next.value
   end
 
+  def test_six_add
+    @list.add_item(1)
+    @list.add_item(2)
+    @list.add_item(3)
+    @list.add_item(4)
+    @list.add_item(5)
+    @list.add_item(6)
+    assert_equal 1, @list.first.value
+    assert_equal 2, @list.first.next.value
+    assert_equal 6, @list.first.next.next.next.next.next.value
+  end
+
+  def test_first
+    @list.add_item(1)
+    @list.add_item(2)
+    @list.add_item(3)
+    @list.add_item(4)
+    assert_equal 1, @list.get_first
+    assert_equal 4, @list.get_last
+  end
+
 end

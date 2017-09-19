@@ -10,4 +10,11 @@ class Item
       @next = Item.new(val)
     end
   end
+  def get_last
+    if (@next)
+      @next.get_last
+    else
+      @value
+    end
+  end
 end
