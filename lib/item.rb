@@ -11,21 +11,17 @@ class Item
     end
   end
   def pop
-    if (@next)
-      if @next.last?
-        @next.value
-        value = @next.value
-        @next = nil
-        return value
-      else
-
-        return @next.pop
-      end
+    return nil unless @next
+    if @next.last?
+      @next.value
+      value = @next.value
+      @next = nil
+      return value
     else
-      return nil
+      return @next.pop
     end
-      #code
   end
+
   def last?
     if @next
       return false

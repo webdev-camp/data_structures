@@ -13,14 +13,11 @@ class TestItem < MiniTest::Test
 
   def test_pop
     assert_equal nil, @item.pop
-
-    #code
   end
 
   def test_pop_one
     @item.push(1)
     one = @item.pop
     assert_equal(1,one)
-    #code
   end
 end

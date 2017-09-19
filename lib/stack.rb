@@ -8,11 +8,14 @@ class Stack
   end
 
   def pop
-    if (@first)
-      @first.pop
+    return nil unless @first
+    if @first.last?
+      @first.value
+      value = @first.value
+      @first = nil
+      return value
     else
-      return nil
+      return @first.pop
     end
-
   end
 end
