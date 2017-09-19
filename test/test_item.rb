@@ -8,5 +8,6 @@ class TestItem < MiniTest::Test
 
   def test_creation
     assert @item
+    assert_equal nil, @next 
   end
 end
