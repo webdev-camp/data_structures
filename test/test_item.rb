@@ -16,7 +16,7 @@ class TestItem < MiniTest::Test
   end
 
   def test_pop
-    assert_equal nil, @item.pop
+    assert @item.pop.nil?
   end
 
   def test_pop_one
