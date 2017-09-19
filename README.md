@@ -1,2 +1,2 @@
 # data_structures
-Exercise
+Used code written during first day
