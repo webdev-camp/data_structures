@@ -1,3 +1,5 @@
+require_relative 'item'
+
 class LinkedList
   attr :first, :next
   def add_item(val)

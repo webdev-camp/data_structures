@@ -1,3 +1,5 @@
+require_relative 'helper'
+
 list = LinkedList.new
 list.add_item(6)
 second = list.add_item(7)
