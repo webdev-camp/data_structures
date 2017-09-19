@@ -9,7 +9,7 @@ class Stack
 
   def pop
     return nil unless @first
-    if @first.last?
+    if @first.last_item?
       @first.value
       value = @first.value
       @first = nil
