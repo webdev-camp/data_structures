@@ -18,19 +18,17 @@ class TestLinkedList < MiniTest::Test
   def test_double_add
     @list.add_item(8)
     @list.add_item(9)
-    assert_equal 9, @list.next.value
+    assert_equal 8, @list.first.value
+    assert_equal 9, @list.first.next.value
+  end
+
+  def test_triple_add
+    @list.add_item(8)
+    @list.add_item(9)
+    @list.add_item(10)
+    assert_equal 8, @list.first.value
+    assert_equal 9, @list.first.next.value
+    assert_equal 10, @list.first.next.next.value
   end
 
 end
-
-
-
-
-
-
-list = LinkedList.new
-second = list.add_item(7)
-list.add_item(9)
-
-# puts list.next.value
-# puts second.value

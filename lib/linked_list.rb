@@ -1,10 +1,10 @@
 require_relative 'item'
 
 class LinkedList
-  attr :first, :next
+  attr :first
   def add_item(val)
     if (@first)
-       @next = Item.new(val)
+       @first.push(val)
     else
       @first = Item.new(val)
     end
