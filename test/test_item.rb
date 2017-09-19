@@ -8,7 +8,11 @@ class TestItem < MiniTest::Test
 
   def test_creation
     assert @item.last?
+  end
 
+  def test_get_last
+    @item.push(2)
+    assert_equal 2, @item.get_last
   end
 
   def test_pop
