@@ -33,4 +33,11 @@ class Item
       return true
     end
   end
+  def get_last
+    if (@next)
+      @next.get_last
+    else
+      @value
+    end
+  end
 end
