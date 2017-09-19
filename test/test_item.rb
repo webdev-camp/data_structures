@@ -7,7 +7,7 @@ class TestItem < MiniTest::Test
   end
 
   def test_creation
-    assert @item.last?
+    assert @item.last_item?
   end
 
   def test_get_last
