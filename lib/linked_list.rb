@@ -22,4 +22,10 @@ class LinkedList
     @first.delete_last
   end
 
+  def each(&block)
+    if (@first)
+      @first.each(&block)
+    end
+  end
+
 end
