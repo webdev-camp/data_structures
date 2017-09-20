@@ -18,4 +18,11 @@ class Stack
       return @first.pop
     end
   end
+
+  def each(&block)
+    if (@first)
+      @first.each(&block)
+    end
+  end
+
 end

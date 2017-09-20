@@ -25,5 +25,19 @@ class TestStack < MiniTest::Test
      assert_equal(1,one)
    end
 
+   def test_iterator_one
+     @stack.push(10)
+     sum = 0
+     @stack.each{|value| sum = sum + value}
+     assert_equal 10, sum
+   end
+
+      def test_iterator_two
+        @stack.push(10)
+        @stack.push(10)
+        sum = 0
+        @stack.each{|value| sum = sum + value}
+        assert_equal 10, sum
+      end
 
 end
