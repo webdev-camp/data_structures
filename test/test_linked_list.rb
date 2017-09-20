@@ -84,7 +84,20 @@ class TestLinkedList < MiniTest::Test
     sum = 0
     @list.each{|val| sum += val }
     assert_equal 6, sum
-
   end
 
+  def test_each_Multiply
+    @list.add_item(1)
+    @list.add_item(2)
+    @list.add_item(3)
+    sum = 1
+    @list.each{|v| sum *= v }
+    assert_equal 6, sum
+  end
+
+  def test_no_nil_values
+    [1..10].each {|v| @list.add_item(v)}
+    assert_equal true, @list.all?
+
+  end
 end
