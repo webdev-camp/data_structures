@@ -10,6 +10,13 @@ class TestStack < MiniTest::Test
     assert @stack
   end
 
+  def test_collect
+    @stack.push(1)
+    @stack.push(2)
+    @stack.push(3)
+    @stack.collect
+  end
+
   def test_push
     @stack.push(1)
     one = @stack.pop
@@ -39,7 +46,7 @@ class TestStack < MiniTest::Test
     @stack.each{|value| sum = sum + value}
     assert_equal 20, sum
   end
-  
+
   def test_sum
     @stack.push(10)
     @stack.push(10)
