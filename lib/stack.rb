@@ -1,8 +1,6 @@
 class Stack
+  include Enumerable
   
-  def each(&block)
-
-  end
   def push(val)
     if (@first)
        @first.push(val)
