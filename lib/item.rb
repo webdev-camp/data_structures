@@ -50,4 +50,10 @@ class Item
     end
   end
 
+  def each(&block)
+    block.call @value
+    if (@next)
+      @next.each(&block)
+    end
+  end
 end
