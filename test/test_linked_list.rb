@@ -83,6 +83,9 @@ class TestLinkedList < MiniTest::Test
   end
 
   def test_to_array
-
+    load(4)
+    ar = []
+    @list.each {|v| ar.push(v)}
+    assert_equal [1,2,3,4], ar
   end
 end
