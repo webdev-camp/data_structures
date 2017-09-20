@@ -1,4 +1,5 @@
 class Item
+
   attr :value, :next
 
   def initialize(val)

@@ -1,4 +1,8 @@
 class Stack
+  
+  def each(&block)
+
+  end
   def push(val)
     if (@first)
        @first.push(val)

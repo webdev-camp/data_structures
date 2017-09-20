@@ -36,8 +36,8 @@ class TestStack < MiniTest::Test
         @stack.push(10)
         @stack.push(10)
         sum = 0
-        @stack.each{|value| sum = sum + value}
-        assert_equal 10, sum
+        @stack.each{|value| sum += value}
+        assert_equal 20, sum
       end
 
 end

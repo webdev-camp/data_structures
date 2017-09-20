@@ -1,6 +1,8 @@
 require_relative 'item'
 
 class LinkedList
+  include Enumerable
+
   attr :first
   def add_item(val)
     if (@first)
