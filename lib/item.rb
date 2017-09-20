@@ -1,8 +1,10 @@
 class Item
   attr :value, :next
+
   def initialize(val)
     @value = val
   end
+
   def push(val)
     if last_item?
       @next = Item.new(val)
@@ -10,6 +12,7 @@ class Item
       @next.push(val)
     end
   end
+
   def pop
     return nil unless @next
     if @next.last_item?
@@ -29,6 +32,7 @@ class Item
       return true
     end
   end
+
   def get_last
     if last_item?
       @value
@@ -36,4 +40,14 @@ class Item
       @next.get_last
     end
   end
+
+  def delete_last
+    return nil unless @next
+    if @next.last_item?
+      @next = nil
+    else
+      @next.delete_last
+    end
+  end
+
 end

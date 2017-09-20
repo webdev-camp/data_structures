@@ -15,4 +15,11 @@ class LinkedList
   def get_last
     @first.get_last
   end
+  def delete_first
+    @first = nil
+  end
+  def delete_last
+    @first.delete_last
+  end
+
 end

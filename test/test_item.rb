@@ -24,4 +24,5 @@ class TestItem < MiniTest::Test
     one = @item.pop
     assert_equal(1,one)
   end
+
 end
