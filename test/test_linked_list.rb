@@ -88,4 +88,16 @@ class TestLinkedList < MiniTest::Test
     @list.each {|v| ar.push(v)}
     assert_equal [1,2,3,4], ar
   end
+
+  def test_string
+    @list.add_item('H')
+    @list.add_item('e')
+    @list.add_item('l')
+    @list.add_item('l')
+    @list.add_item('o')
+    ar = []
+    @list.each {|v| ar.push(v)}
+    ar = ar.join('')
+    assert_equal 'Hello', ar
+  end
 end
