@@ -59,6 +59,7 @@ class TestLinkedList < MiniTest::Test
     @list.add_item(4)
     @list.delete_last
     assert_equal 3, @list.get_last
+    assert_equal 1, @list.get_first
   end
 
   def test_delete_two
@@ -69,6 +70,8 @@ class TestLinkedList < MiniTest::Test
     @list.delete_last
     @list.delete_last
     assert_equal 2, @list.get_last
+    assert_equal 1, @list.get_first
+
   end
 
   def test_delete_first
