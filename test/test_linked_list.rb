@@ -98,9 +98,8 @@ class TestLinkedList < MiniTest::Test
     @list.add_item('l')
     @list.add_item('l')
     @list.add_item('o')
-    ar = []
-    @list.each {|v| ar.push(v)}
-    ar = ar.join('')
-    assert_equal 'Hello', ar
+    ar = @list.to_a
+    assert_equal 'Hello', ar.join
   end
+
 end
